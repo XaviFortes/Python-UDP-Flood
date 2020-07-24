@@ -92,7 +92,7 @@ def clear():
 def byebye():
 	clear()
 	os.system("figlet Youre Leaving Sir -f slant")
-	sys.exit(0)
+	sys.exit(130)
 
 def exit_gracefully(signum, frame):
     # restore the original signal handler as otherwise evil things will happen
