@@ -5,6 +5,8 @@ It can be converted into a DDOS attack using multiple computers.
 
 I'm not responsible the use you give using this program.
 
+ It actually Supports UDP and TCP
+
 ## Usage
 download or copy the script of rundos.sh
 
