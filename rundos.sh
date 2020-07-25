@@ -5,7 +5,7 @@ chmod +x /tmp/uwu.py
 cd /tmp
 clear
 while true; do
-    python uwu.py
+    python3 uwu.py
     case $? in
     130) break ;;
     esac
