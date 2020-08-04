@@ -25,5 +25,6 @@ while true; do
     figlet Hit another time Ctrl + C to exit -f slant
     figlet You have 10 seconds -f smslant
     sleep 10
+    clear
 done
 clear
