@@ -25,3 +25,9 @@ After running this code and want to open it again just do:
 ```
 And if you want an auto-update bash script (I don't think it would be too much updated)
 take the Auto-Install Script and put it inside a .sh file
+
+### Windows
+If you are on windows install Python3 and download the script udpflood.py open a powershell window or cmd
+```bash
+python3 udpflood.py
+```
