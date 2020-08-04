@@ -4,7 +4,7 @@ wget -O /tmp/uwu.py 'https://raw.githubusercontent.com/XaviFortes/Python-UDP-Flo
 chmod +x /tmp/uwu.py
 sudo yum install epel-release
 sudo yum install snapd python3 python
-sudo apt-get install python3
+sudo apt-get install python38
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 sudo yum update
