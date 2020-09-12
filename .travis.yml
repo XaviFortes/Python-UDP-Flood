@@ -21,7 +21,7 @@ install:
     - pip install coverage
 
 script:
-    - python3 udpflood.py < .test ||true
+    - python3 udpflood.py < .test
     
 after_success:
   - bash <(curl -s https://codecov.io/bash)
