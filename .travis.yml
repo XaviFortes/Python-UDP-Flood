@@ -21,6 +21,6 @@ install:
 
 script:
     - python3 udpflood.py < .test
-
-after_script:
-    - bash <(curl -s https://codecov.io/bash)
+    
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
