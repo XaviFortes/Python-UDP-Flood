@@ -20,6 +20,9 @@ os.system("figlet DDOS ATTACK -f slant")
 print("\033[1;33;40m If you have any issue post a thread on https://github.com/XaviFortes/Python-UDP-Flood/issues\n")
 
 print("\033[1;32;40m ==> Code by Karasu <==  \n")
+test = input()
+if test == n:
+	exit()
 ip = str(input(" Host/Ip:"))
 port = int(input(" Port:"))
 choice = str(input(" UDP(y/n):"))
