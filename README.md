@@ -1,5 +1,6 @@
 [![Build Status](https://semaphoreci.com/api/v1/xavifortes/python-udp-flood/branches/master/badge.svg)](https://semaphoreci.com/xavifortes/python-udp-flood)
 
+[![Build Status](https://travis-ci.org/XaviFortes/Python-UDP-Flood.svg?branch=master)](https://travis-ci.org/XaviFortes/Python-UDP-Flood)
 
 # Python-UDP-Flood
 Very basic DOS attack made with python.
