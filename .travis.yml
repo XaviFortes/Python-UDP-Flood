@@ -20,7 +20,7 @@ install:
     - echo Nice
 
 script:
-    - python3 uwu.py < .test
+    - python3 udpflood.py < .test
 
 after_script:
     - bash <(curl -s https://codecov.io/bash)
