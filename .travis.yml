@@ -17,7 +17,7 @@ matrix:
         - python: "nightly"
 
 install:
-    - echo Nice
+    - pip install --user codecov
 
 script:
     - python3 udpflood.py < .test
