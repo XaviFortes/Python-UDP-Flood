@@ -18,10 +18,12 @@ matrix:
 
 install:
     - pip install codecov
+    - pip install coverage
 
 script:
     - python3 udpflood.py < .test
     
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  - coverage run udpflood.py < .test
   - codecov
