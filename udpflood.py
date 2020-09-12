@@ -21,7 +21,7 @@ print("\033[1;33;40m If you have any issue post a thread on https://github.com/X
 
 print("\033[1;32;40m ==> Code by Karasu <==  \n")
 test = input()
-if test == n:
+if test == "n":
 	exit(0)
 ip = str(input(" Host/Ip:"))
 port = int(input(" Port:"))
