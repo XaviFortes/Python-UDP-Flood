@@ -4,7 +4,8 @@
 
 [![Build Status](https://travis-ci.org/XaviFortes/Python-UDP-Flood.svg?branch=master)](https://travis-ci.org/XaviFortes/Python-UDP-Flood)
 
-[![JK](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://github.com/XaviFortes)
+[![JK](https://forthebadge.com/images/badges/built-by-developers.svg)](https://github.com/XaviFortes) [![JK](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://github.com/XaviFortes) [![JK](https://forthebadge.com/images/badges/built-with-grammas-recipe.svg)](https://github.com/XaviFortes)
+[![JK](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/XaviFortes)
 
 # Python-UDP-Flood
 Very basic DOS attack made with python.
