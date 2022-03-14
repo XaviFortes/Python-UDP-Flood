@@ -32,7 +32,7 @@ After running this code and want to open it again just do:
 ```bash
 ./ddos.sh
 ```
-And if you want an auto-update bash script (I don't think it would be too much updated)
+And if you want an auto-update bash script (I don't think it would be updated too much)
 take the Auto-Install Script and put it inside a .sh file
 
 ### Windows
