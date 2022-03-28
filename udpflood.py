@@ -33,11 +33,11 @@ def run():
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
 		try:
-			s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) #It's using the UDP method as you can see in SOCK_DGRAM
+			s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) #UDP = SOCK_DGRAM
 			addr = (str(ip),int(port))
 			for x in range(times):
 				s.sendto(data,addr)
-			print(i +"Packet Sent!!!")
+			print(i +"UDP Sent!!!")
 		except:
 			s.close()
 			print("[!] Error!!!")
@@ -47,12 +47,12 @@ def run2():
 	i = random.choice(("[*]","[!]","[#]"))
 	while True:
 		try:
-			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #And here it's using the TCP method as you can see in SOCK_STREAM
+			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #TCP = SOCK_STREAM
 			s.connect((ip,port))
 			s.send(data)
 			for x in range(times):
 				s.send(data)
-			print(i +" Sent!!!")
+			print(i +"TCP Sent!!!")
 		except:
 			s.close()
 			print("[*] Error")
@@ -84,11 +84,8 @@ def whereuwere():
         run2()
 
 def clear():
-	# for windows
     if name == 'nt':
         _ = system('cls')
-
-    # for mac and linux(here, os.name is 'posix')
     else:
         _ = system('clear')
 
@@ -98,8 +95,7 @@ def byebye():
 	sys.exit(130)
 
 def exit_gracefully(signum, frame):
-    # restore the original signal handler as otherwise evil things will happen
-    # in raw_input when CTRL+C is pressed, and our signal handler is not re-entrant
+    # restore the original signal handler
     signal.signal(signal.SIGINT, original_sigint)
 
     try:
@@ -109,13 +105,13 @@ def exit_gracefully(signum, frame):
             byebye()
 
     except KeyboardInterrupt:
-        print("Ok ok, quitting")
+        print("Ok ok")
         byebye()
 
-    # restore the exit gracefully handler here
+    # restore the gracefully exit handler
     signal.signal(signal.SIGINT, exit_gracefully)
 
 if __name__ == '__main__':
-    # store the original SIGINT handler
+    # store SIGINT handler
     original_sigint = signal.getsignal(signal.SIGINT)
     signal.signal(signal.SIGINT, exit_gracefully)
